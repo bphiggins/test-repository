@@ -1,0 +1,66 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Damaged Item</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="clearBar5"></div>
+					<div style="width: 650px">
+						<div id="modalButton">
+							<button id="takeDamagedItemPictureButton" class="modalButtonTop">Take Picture</button>
+						</div>
+						<div class="modalColumn1" style="width: 30px;">
+							<img src="images/uhs/checkbox-unchecked.png" id="customerReportedFailure">
+						</div>
+						<div class="modalColumn2" id="customerReportedFailureLabel" style="width: 200px;">
+							Customer Reported Failure
+						</div>
+						<div class="modalColumn1" style="width: 30px;">
+							<img src="images/uhs/checkbox-unchecked.png" id="accessoryMissing">
+						</div>
+						<div class="modalColumn2" id="accessoryMissingLabel" style="width: 200px;">
+							Accessory Missing
+						</div>
+						<div class="clearBar5"></div>
+						<div class="modalColumn1" style="width: 30px;">
+							<img src="images/uhs/checkbox-unchecked.png" id="visibleDamage">
+						</div>
+						<div class="modalColumn2" id="visibleDamageLabel" style="width: 200px;">
+							Visible Damage
+						</div>
+						<div class="modalColumn1" style="width: 30px;">
+							<img src="images/uhs/checkbox-unchecked.png" id="other">
+						</div>
+						<div class="modalColumn2" id="otherLabel" style="width: 200px;">
+							Other
+						</div>
+						<div class="clearBar5"></div>
+						<div class="modalColumn1" style="width: 40px;">
+							<label for="notes">Notes</label>
+						</div>
+						<div class="modalColumn2" style="overflow: visible;">
+							<textarea name="notes" id="notes" maxlength="200" style="width: 400px;">{{notes}}</textarea>
+						</div>
+						<div class="clearBar5"></div>
+						<div class="modalColumn1" style="width: 100%;">
+							<img src="images/uhs/placeHolder.png" id="damagedItemPicture1">
+							<img src="images/uhs/placeHolder.png" id="damagedItemPicture2">
+							<img src="images/uhs/placeHolder.png" id="damagedItemPicture3">
+							<img src="images/uhs/placeHolder.png" id="damagedItemPicture4">
+						</div>
+						<input type="hidden" name="damagedItemId" id="damagedItemId" value="{{damagedItemId}}">
+						<input type="hidden" name="localDamagedItemId" id="localDamagedItemId" value="{{localDamagedItemId}}">
+						<input type="hidden" name="localTransferNumber" id="localTransferNumber" value="{{localTransferNumber}}">
+						<input type="hidden" name="transferNumber" id="transferNumber" value="{{transferNumber}}">
+						<input type="hidden" name="prefix" id="prefix" value="{{prefix}}">
+						<input type="hidden" name="unit" id="unit" value="{{unit}}">
+						<input type="hidden" name="object" id="object" value="{{object}}">
+						<input type="hidden" name="damagedItemDate" id="damagedItemDate" value="{{damagedItemDate}}">
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

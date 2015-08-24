@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<!-- <script type="text/javascript" src="http://192.168.101.14:8080/target/target-script-min.js#anonymous"></script> -->
+
+		<!-- following removed per rho_javascript_api.js -->
+
+		<!-- <script type="text/javascript" src="/public/js/rho_javascript_api.js"></script> -->
+		<!-- <script type="text/javascript" src="/public/js/rho_common_api_noconflict.js"></script> -->
+
+		<script type="text/javascript" src="/public/jquery/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/public/jquery/jquery.json-2.3.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules-ORM.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules-ORMHelper.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules-Ruby-RunTime.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules-Rhosim-Fix.js"></script> -->
+
+		<!-- <script type="text/javascript" src="/public/api/rhoapi-modules.js" charset="utf-8"></script> -->
+
+		<script type="text/javascript" src="/public/js/handlebars-v1.2.0.js"></script>
+		<script type="text/javascript" src="/public/js/ftscroller.js"></script>
+		<script type="text/javascript" src="/public/js/inMotion.js"></script>
+		<script type="text/javascript" src="/public/js/application.js"></script>
+		<script type="text/javascript" src="/public/js/login.js"></script>
+		<script type="text/javascript" src="/public/js/tripMenu.js"></script>
+		<script type="text/javascript" src="/public/js/accountMenu.js"></script>
+		<script type="text/javascript" src="/public/js/taskMenu.js"></script>
+		<script type="text/javascript" src="/public/js/itemMenu.js"></script>
+		<link rel="stylesheet" href="/public/css/UhsMobile.css">
+		
+		<!-- required for pre-4.0 JS API -->
+		<!-- <script type="text/javascript" src="/public/jquery/jquery-1.6.4.min.js"></script> -->
+		<!-- <script type="text/javascript" src="/public/jquery/jquery.json-2.3.min.js"></script> -->
+		<!-- pre-4.0 JS API -->
+		<!-- <script type="text/javascript" src="/public/js/rho_javascript_api.js"></script> -->
+		<!-- compatibility layer -->
+		<!-- <script type="text/javascript" src="/public/js/rho_common_api_noconflict.js"></script> -->
+		<!-- new Common JS API -->
+		<!-- <script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script> -->
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", loadLogin);
+			function loadLogin(event) {
+				try {
+					//alert("1");
+					//stop from automatically syncing
+					//if you are at this screen, you should be logged out
+					Rho.RhoConnectClient.logout();
+					//alert("2");
+					var hostName = Rho.RhoConnectClient.syncServer;
+					//alert("2A: " + "WHATThFFF".toUpperCase());
+					var host2 = hostName.split("//");
+					//alert("2B");
+					var host3 = host2[1];
+					//alert("2C");
+					var host4 = host3.split(".");
+					//alert("2D");
+					var host5 = host4[0];
+					//alert("2E: " + host5);
+					//alert("host5: " + host5.toLowerCase());
+				var host = Rho.RhoConnectClient.syncServer.toString().split("//")[1].split(".")[0].toLowerCase();
+					//alert("3");
+				var shortHost = host.substring(0, 7);
+					//alert("4");
+				if (host == "rho4prod" || shortHost == "rho4pro") {
+					$("#inMotionEnvironment").text("");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "rho4qua" || shortHost == "rho4qua") {
+					$("#inMotionEnvironment").text("Test");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "rho4trn" || shortHost == "rho4trn") {
+					$("#inMotionEnvironment").text("Training");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "rho4int" || shortHost == "rho4int") {
+					$("#inMotionEnvironment").text("Integration");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "rho4dev" || shortHost == "rho4dev") {
+					$("#inMotionEnvironment").text("Development");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "rhodev1" || shortHost == "rhodev1") {
+					$("#inMotionEnvironment").text("Development (5)");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else if (host == "localhost") {
+					$("#inMotionEnvironment").text("Local Server");
+					$("#loginButtonConnect").off("click");
+					$("#loginButtonConnect").on("click", onLogin);
+				}
+				else {
+					//alert("5");
+					$("#inMotionEnvironment").text("Unknown Connection -- please contact support");
+				}
+				}
+				catch(e) {
+					//alert("6");
+					try {
+					$("#inMotionEnvironment").text("Error");
+					}
+					catch (ee) {
+						alert("6A" + ee.message);
+					}
+					alert("7");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="appOverlay" style="display: none;"></div>
+		<div id="content" class="content" style="height: 500px;">
+			<div id="loginPage">
+				<div id="loginHeader" style="position: relative; text-align: center; width: 50%; margin: auto;">
+					<div style="position: relative; float: left; width: 50%;">
+						<img src="/public/images/uhs/inMotion-logo.png" alt="uhs logo" id="uhsLogo"/>
+					</div>
+				</div>
+				<div class="clearBar10"></div>
+				<div id="loginContent" style="text-align: center;">
+					<div id="loginError"></div>
+					<input type="text" name="userName" id="loginFormUserName" value="" placeholder=" user name" style="height: 30px; margin: 8px 0 0 0;">
+					<br/>
+					<input type="password" name="password" id="loginFormPassword" value="" placeholder=" password" style="height: 30px; margin: 8px 0 0 0;">
+					<br/>
+					<button id="loginButtonConnect" class="loginButton">Login</button>
+				</div>
+				<div class="clearBar10"></div>
+				<div id="loginFooter" style="text-align: center;">
+					<div>inMotion 2 <span id="inMotionEnvironment" style="color: red;">Unknown</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

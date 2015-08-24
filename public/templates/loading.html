@@ -1,0 +1,112 @@
+<style>
+	/*
+	Copyright (c) 2010-2012 Ivan Vanderbyl
+	Originally found at http://ivan.ly/ui
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+	*/
+	.ui-progress-bar {
+		position: relative;
+		height: 25px;
+		padding-right: 2px;
+		background-color: #abb2bc;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		border-radius: 5px;
+		background: linear-gradient(#949daa 0%, #abb2bc 100%);
+		background: -webkit-linear-gradient(#3E79B1, #01276B); /* For Safari */
+		background: -o-linear-gradient(#3E79B1, #01276B); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#3E79B1, #01276B); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#3E79B1, #01276B); /* Standard syntax */
+		-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px 0px white;
+		-o-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px 0px white;
+		-moz-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px 0px white;
+		box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px 0px white;
+	}
+	.ui-progress-bar .ui-progress {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		height: 23px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		border-radius: 5px;
+		background: -webkit-linear-gradient(#DFE6EF, #3E79B1); /* For Safari */
+		background: -o-linear-gradient(#DFE6EF, #3E79B1); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#DFE6EF, #3E79B1); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#DFE6EF, #3E79B1); /* Standard syntax */
+		border-top: 1px solid #DFE6EF;
+		border-right: 1px solid #DFE6EF;
+		border-bottom: 1px solid #3E79B1;
+		border-left: 1px solid #3E79B1;
+	}
+	#loadingContainer {
+		height: 100%;
+		background: #3E79B1;
+	}
+	#loadingImageContainer {
+		position: relative;
+		width: 35%;
+		height: 100%;
+		float: left;
+	}
+	#loadingImage {
+		position: absolute;
+		margin: auto;
+	  	top: 0; left: 0; bottom: 0; right: 0;
+	}
+	#loadingTextContainer {
+		position: relative;
+		width: 300px;
+		float: left;
+		text-align: center;
+	}
+	#loadingMessage {
+		line-height: 5em;
+		color: white;
+		width: 300px;
+	}
+	.loadingResource {
+		color: white;
+		font-size: 0.75em;
+		padding-bottom: 5px;
+		text-align: right;
+	}
+</style>
+<div id="modalForm">
+	<div id="loadingContainer">
+		<div id="loadingImageContainer">
+			<img id="loadingImage" src="images/uhs/hourglass.png">
+		</div>
+		<div id="loadingTextContainer">
+			<div id="loadingMessage">Logging into application</div>
+			<div class="loadingResource"><span id="loadingResource">Loading Resources</span>&nbsp;<span id="loadingValue">2%</span></div>
+			<div class="ui-progress-bar ui-container" id="progress_bar">
+				<div id="loadingBar" class="ui-progress" style="width: 1%;">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

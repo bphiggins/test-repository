@@ -1,0 +1,65 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Edit Patient</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="modalColumn1">
+						Name
+					</div>
+					<div class="modalColumn2" style="width: 559px;">
+						<input name="firstName" id="firstName"type="text" maxlength="24" value="{{firstName}}" style="width: 225px;" placeholder=" first name">&nbsp;
+						<input name="middleInitial" id="middleInitial" type="text" maxlength="1" value="{{middleInitial}}" style="width: 20px;" placeholder="MI">&nbsp;
+						<input name="lastName" id="lastName" type="text" maxlength="32" value="{{lastName}}" style="width: 277px;" placeholder=" last name">
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						<label for="hospitalPatientId">Hospital Id</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="hospitalPatientId" id="hospitalPatientId" type="text" maxlength="32" value="{{hospitalPatientId}}">
+					</div>
+					<div class="modalColumn1">
+						<label for="roomNumber">Room</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="roomNumber" id="roomNumber" type="text" maxlength="8" value="{{roomNumber}}">
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						<label for="physiciansId">Physician Id</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="physiciansId" id="physiciansId" type="text" maxlength="10" value="{{physiciansId}}">
+					</div>
+					<div class="modalColumn1">
+						<label for="additionalPatientId">Add'l Id</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="additionalPatientId" id="additionalPatientId" type="text" maxlength="16" value="{{additionalPatientId}}">
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						<label for="tradingPartnerId">Partner Id</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="tradingPartnerId" id="tradingPartnerId" type="text" maxlength="15" value="{{tradingPartnerId}}">
+					</div>
+					<div class="modalColumn1">
+						<label for="deliveryLocation">Location</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="deliveryLocation" id="deliveryLocation" type="text" maxlength="32" value="{{deliveryLocation}}">
+					</div>
+					<div class="clearBar0"></div>
+					<input name="uhsPatientId" id="uhsPatientId" type="hidden" value="{{uhsPatientId}}">
+					<input name="localUhsPatientId" id="localUhsPatientId" type="hidden" value="{{localUhsPatientId}}">
+					<input name="accountId" id="accountId" type="hidden" value="{{accountId}}">
+					<input name="object" id="object" type="hidden" value="{{object}}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

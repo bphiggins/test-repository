@@ -1,0 +1,52 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Assign Patient</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					{{#if patients}}
+					{{#each patients}}
+					<div class="patientContainer">
+						<div class="patientContainerRadio">
+							<img src="images/uhs/radiobutton-unchecked.png" class="patientList" id="patientList{{@index}}" data-index="{{@index}}" data-localUhsPatientId="{{localUhsPatientId}}" data-uhsPatientId="{{uhsPatientId}}">
+						</div>
+						<div class="patientContainerText1" data-index="{{@index}}">
+							{{#if patientName}}
+							{{patientName}}<br>
+							{{else}}
+							Name not specified<br>
+							{{/if}}
+							{{#if roomNumber}}
+							{{roomNumber}}
+							{{else}}
+							Room not specified<br>
+							{{/if}}
+						</div>
+						<div class="patientContainerText2" data-index="{{@index}}">
+							{{#if dspUhsPatientId}}
+							{{dspUhsPatientId}}<br>
+							{{else}}
+							ID not specified<br>
+							{{/if}}
+							{{#if deliveryLocation}}
+							{{deliveryLocation}}<br>
+							{{else}}
+							Location not specified
+							{{/if}}
+						</div>
+					</div>		
+					{{/each}}
+					{{else}}
+					<div class="patientContainer">
+						<div class="patientContainerText">
+							No active patients available
+						</div>
+					</div>		
+					{{/if}}	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

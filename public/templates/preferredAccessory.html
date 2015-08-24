@@ -1,0 +1,51 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Edit Preferred Accessory</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div style="width: 650px">
+						<table id="preferredAccessoryTable" style="margin: 5px 0 0 5px;font-size: 0.875em;">
+							<colgroup>
+								<col style="width: 75px;">
+								<col style="width: 75px;">
+								<col style="width: 150px;">
+								<col style="width: 325px;">
+							</colgroup>
+							<thead class="listHeader">
+								<tr>
+									<th style="font-family: TahomaBoldLocal; text-align: right;">Pref.</th>
+									<th style="font-family: TahomaBoldLocal; text-align: right;">Actual</th>
+									<th style="font-family: TahomaBoldLocal; text-align: left;">Stock Id</th>
+									<th style="font-family: TahomaBoldLocal; text-align: left;">Description</th>
+								</tr>	
+							</thead>
+							<tbody>
+								{{#if accessoryList}}
+									{{#each accessoryList}}
+									<tr class="{{rowClass}}">
+										<td style="text-align: right;">{{quantity}}</td>
+										<td style="text-align: right;"><input type="number" style="width: 50px;" value="{{actualQuantity}}" onkeypress="return event.charCode >= 48 && event.charCode <= 57"></td>
+										<td>{{stockNumber}}</td>
+										<td>{{itemDescription}}</td>
+									</tr>
+									{{/each}}	
+								{{else}}
+								<tr>
+									<td colspan="4" style="text-align: center;">
+										<p>No preferred accessories found for this prefix unit</p>
+									</td>
+								</tr>
+								{{/if}}	
+							</tbody>
+						</table>
+						<input type="hidden" id="prefix" name="prefix" value="{{prefix}}">
+						<input type="hidden" id="unit" name="unit" value="{{unit}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

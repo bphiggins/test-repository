@@ -1,0 +1,28 @@
+<div id="frameListContent">
+	<div>
+		{{#each accounts}}
+			{{#if firstLetter}}
+				<div class="accountLetter" id="accountLetter{{firstLetter}}">{{firstLetter}}</div>
+			{{/if}}
+			<div class="accountLetterDetailContainer" id="accountLetterDetail"  data-accountLetterId="{{accountLetterId}}">
+				<div class="accountLetterDetailTextContainer">
+					<div class="accountLetterDetailText1">
+						{{accountName}}<br>
+						{{accountId}}
+					</div>
+					<div class="accountLetterDetailText2">
+						{{addressLine1}}<br>
+						{{addressLine2}}<br>
+						{{city}}, {{state}} {{zip}}
+					</div>
+					<div class="accountLetterDetailText3">
+						{{#if taskCount}}
+						<strong>{{taskCount}}</strong>
+						{{/if}}
+					</div>
+				</div>
+				<div class="accountLetterDetailImageContainer" data-accountId="{{accountId}}"><img class="accountLetterDetailImage" src="images/uhs/add.png"></div>
+			</div>
+		{{/each}}
+	</div>
+</div>

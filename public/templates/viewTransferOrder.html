@@ -1,0 +1,99 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">View Transfer Order</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="modalColumn1">
+						Transfer
+					</div>
+					<div class="modalColumn2">
+						{{dspTransferNumber}}
+					</div>
+					<div class="modalColumn1">
+						Status
+					</div>
+					<div class="modalColumn2">
+						{{status}}
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						For
+					</div>
+					<div class="modalColumn2">
+						{{accountName}} ({{accountId}})
+					</div>
+					<div class="modalColumn1">
+						Date
+					</div>
+					<div class="modalColumn2">
+						{{dateFormat orderDate}}
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						By
+					</div>
+					<div class="modalColumn2">
+						{{orderBy}}
+					</div>
+					<div class="modalColumn1">
+						Dept
+					</div>
+					<div class="modalColumn2">
+						{{department}}
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						PO
+					</div>
+					<div class="modalColumn2">
+						{{purchaseOrder}}
+					</div>
+					<div class="modalColumn1">
+						Patient
+					</div>
+					<div class="modalColumn2">
+						{{patientName}}
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						Comment
+					</div>
+					<div class="modalColumn2" style="width: 440px;">
+						{{comment}}
+					</div>
+					<div class="clearBar0"></div>
+					<table style="margin: 5px 0 0 5px;font-size: 0.875em;">
+						<colgroup>
+							<col style="width: 75px;">
+							<col style="width: 75px;">
+							<col style="width: 150px;">
+							<col style="width: 325px;">
+						</colgroup>
+						<thead class="listHeader">
+							<th style="font-family: TahomaBoldLocal;">Prefix</th>
+							<th style="font-family: TahomaBoldLocal; text-align: right;">Qty</th>
+							<th style="font-family: TahomaBoldLocal;">PO</th>
+							<th style="font-family: TahomaBoldLocal;">Dept</th>
+						</thead>
+						<tbody>
+							{{#each equipmentOrders}}
+							<tr class="{{rowClass}}">
+								<td><a href="javascript: editOrderItem('{{prefix}}','{{department}}','{{purchaseOrder}}')">{{prefix}}</a></td>
+								<td style="text-align: right;">{{quantityOrdered}}</td>
+								<td>{{purchaseOrder}}</td>
+								<td>{{department}}</td>
+							</tr>
+							{{/each}}	
+						</tbody>
+					</table>
+					<input type="hidden" name="localTransferNumber" id="localTransferNumber" value="{{localTransferNumber}}">
+					<input type="hidden" name="transferNumber" id="transferNumber" value="{{transferNumber}}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+

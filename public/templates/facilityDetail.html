@@ -1,0 +1,39 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Facility Detail</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText" style="height: 100%;">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="modalColumn1" style="width: 85px;">
+						Account
+					</div>
+					<div class="modalColumn2">
+						{{accountName}}&nbsp;({{accountId}})<br>
+						{{addressLine1}}<br>
+						{{#if addressLine2}}
+						{{addressLine2}}<br>
+						{{/if}}
+						{{city}},&nbsp;{{state}}&nbsp;&nbsp;{{zip}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1" style="width: 85px;">
+						Standing PO
+					</div>
+					<div class="modalColumn2">
+						{{standingPurchaseOrder}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1" style="width: 85px;">
+						District
+					</div>
+					<div class="modalColumn2">
+						{{districtId}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+

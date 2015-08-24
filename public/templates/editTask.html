@@ -1,0 +1,74 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">{{modalTitle}}</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div id="taskForm">
+						<div class="modalColumn1">
+							<label for="orderedBy">CUST</label>
+						</div>
+						<div class="modalColumn2">
+							<input name="orderBy" id="orderBy" type="text" value="{{orderBy}}" maxlength="25">
+						</div>
+						<div class="modalColumn1">
+							<label for="department">DEPT</label>
+						</div>
+						<div class="modalColumn2">
+							<input name="department" id="department" type="text" value="{{department}}" maxlength="20">
+						</div>
+						<div class="clearBar0"></div>
+						<div class="modalColumn1">
+							<label for="purchaseOrder">PO</label>
+						</div>
+						<div class="modalColumn2">
+							<input name="purchaseOrder" id="purchaseOrder" type="text" value="{{purchaseOrder}}" maxlength="22">
+						</div>
+						<div class="modalColumn1">
+							<label for="telephoneNumber">TEL</label>
+						</div>
+						<div class="modalColumn2">
+							<input name="telephoneNumber" id="telephoneNumber" type="number" min="0" max="9999999999" value="{{telephoneNumber}}" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</div>
+						<div class="clearBar0"></div>
+						<div class="modalColumn1">
+							<label for="swapOutFlag">SWAP</label>
+						</div>
+						<div class="modalColumn2">
+							<select name="swapOutFlag" id="swapOutFlag">
+								<option value="N">No</option>
+								<option value="Y">Yes</option>
+							</select>
+						</div>
+						<div class="modalColumn1">
+							<label for="comment">DEL INSTR</label>
+						</div>
+						<div class="modalColumn2">
+							<textarea class="modalColumn2" name="comment" id="comment" maxlength="50">{{comment}}</textarea>
+						</div>
+						<input name="transferNumber" id="transferNumber" type="hidden" value="{{transferNumber}}">
+						<input name="localTransferNumber" id="localTransferNumber" type="hidden" value="{{localTransferNumber}}">
+						<input name="transferType" id="transferType" type="hidden" value="{{transferType}}">
+						<input name="status" id="status" type="hidden" value="{{status}}">
+						<input name="accountId" id="accountId" type="hidden" value="{{accountId}}">
+						<input name="orderDate" id="orderDate" type="hidden" value="{{orderDate}}">
+						<input name="transferDate" id="transferDate" type="hidden" value="{{transferDate}}">
+						<input name="deliveryDate" id="deliveryDate" type="hidden" value="{{deliveryDate}}">
+						<input name="postedByEmployeeId" id="postedByEmployeeId" type="hidden" value="{{postedByEmployeeId}}">
+						<input name="deliveredByEmployeeId" id="deliveredByEmployeeId" type="hidden" value="{{deliveredByEmployeeId}}">
+						<input name="transferredByEmployeeId" id="transferredByEmployeeId" type="hidden" value="{{transferredByEmployeeId}}">
+						<input name="uhsPatientId" id="uhsPatientId" type="hidden" value="{{uhsPatientId}}">
+						<input name="localUhsPatientId" id="localUhsPatientId" type="hidden" value="{{localUhsPatientId}}">
+						<input name="cstat" id="cstat" type="hidden" value="{{cstat}}">
+						<input name="swapOutNumber" id="swapOutNumber" type="hidden" value="{{swapOutNumber}}">
+						<input name="localSwapOutNumber" id="localSwapOutNumber" type="hidden" value="{{localSwapOutNumber}}">
+						<input name="object" id="object" type="hidden" value="{{object}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+

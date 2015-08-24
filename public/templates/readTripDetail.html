@@ -1,0 +1,23 @@
+<div id="frameSideContent">
+	{{#each accounts}}
+		<div class="accountContainer">
+			<div class="accountImageContainer" data-accountId="{{accountId}}"><img class="accountImage" src="images/uhs/menuBlack.png"></div>
+			<div class="accountTextContainer" data-accountId="{{accountId}}">
+				<div class="accountText1">{{accountName}}</div>
+				<div class="accountText2">
+					<div class="accountText2_1">{{accountId}}</div>
+					<div class="accountText2_2">{{taskCount}} Task(s)</div>
+				</div>
+			</div>
+		</div>
+		{{#each tripDetails}}
+			<div class="taskContainer" data-accountId="{{accountId}}" data-localTaskReferenceId="{{localTaskReferenceId}}">
+				<div class="taskImageContainer"><img class="taskImage" src="{{tripDetailImage}}" data-taskReferenceId="{{taskReferenceId}}" data-localTaskReferenceId="{{localTaskReferenceId}}"></div>
+				<div class="taskTextContainer" data-taskReferenceId="{{taskReferenceId}}" data-localTaskReferenceId="{{localTaskReferenceId}}" data-taskType="{{taskType}}" data-accountId="{{accountId}}" data-scanLevel="{{scanLevel}}">
+					<div class="taskText1">{{taskType}} {{dspTaskReferenceId}}</div>
+					<div class="taskText2">{{equipmentOrderCount}} item(s) {{department}}</div>
+				</div>
+			</div>
+		{{/each}}
+	{{/each}}
+</div>

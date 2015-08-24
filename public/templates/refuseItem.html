@@ -1,0 +1,55 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Refuse Item</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div id="modalButton">
+						<button id="selectAllItems" class="modalButtonTop" style="width: 98px;">Select All</button>
+						<button id="deselectAllItems" class="modalButtonTop" style="top: 35px; width: 98px;">Deselect All</button>
+						<div class="clearBar0"></div>
+					</div>
+					<div style="width:650px">
+						<div class="modalColumn1">
+							<label for="reasonRefused">Reason</label>
+						</div>
+						<div class="modalColumn2">
+							<select name="reasonRefused" id="reasonRefused">
+								<option value=""> </option>
+								<option value="A">Accepted in-transit</option>
+								<option value="B">Broken</option>
+								<option value="E">Extra</option>
+								<option value="N">No longer needed</option>
+								<option value="O">Other</option>
+								<option value="U">Unacceptable</option>
+								<option value="W">Wrong Item</option>
+							</select>
+						</div>
+						<div class="clearBar0"></div>
+						<div class="modalColumn1">
+							<label for="notes">Notes</label>
+						</div>
+						<div class="modalColumn2" style="width: 440px;">
+							<textarea name="notes" id="notes" maxlength="200" style="width: 436px;"></textarea>
+						</div>
+					</div>
+					<div class="clearBar0" style="border-bottom: 1px solid #3E79B1;"></div>
+				
+					{{#each items}}
+					<div class="refuseContainer">
+						<div class="refuseContainerRadio">
+							<img src="images/uhs/checkbox-unchecked.png" class="refuseList" id="refuseList{{@index}}" data-index="{{@index}}" data-prefix="{{prefix}}" data-unit="{{unit}}">
+						</div>
+						<div class="refuseContainerText" data-index="{{@index}}">
+							<div class="refuseText1">{{itemDescription}}</div>
+							<div class="refuseText2">{{itemDescription2}}</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

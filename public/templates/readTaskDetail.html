@@ -1,0 +1,60 @@
+<div id="frameListContent">
+	<div id="taskDetailTotalContainer">
+		<table>
+			<colgroup>
+				<col style="width: 50px;">
+				<col style="width: 275px;">
+				<col style="width: 65px;">
+				<col style="width: 65px;">
+			</colgroup>
+			<thead class="listHeader">
+				<tr>
+					<th style="font-family: TahomaBoldLocal; text-align: left;">Prefix</th>
+					<th style="font-family: TahomaBoldLocal; text-align: left;">Description</th>
+					<th style="font-family: TahomaBoldLocal; text-align: right;">Ordered</th>
+					<th style="font-family: TahomaBoldLocal; text-align: right;">Scanned</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each transferTotals}}
+				<tr class="{{rowClass}}">
+					<td style="font-family: TahomaBoldLocal;">{{prefix}}</td>
+					<td>{{description}}</td>
+					<td style="text-align: right;">{{quantityOrdered}}</td>
+					<td style="text-align: right;">{{quantityScanned}}</td>
+				</tr>
+				{{/each}}
+				{{#transferOrderTotal}}
+				<tr>
+					<td colspan="2" style="border-top: thin solid black;"><strong>{{description}}</strong></td>
+					<td style="border-top: thin solid black; text-align: right;">{{quantityOrdered}}</td>
+					<td style="border-top: thin solid black; text-align: right;">{{quantityScanned}}</td>
+				</tr>
+				{{/transferOrderTotal}}
+			</tbody>
+		</table>
+	</div>
+	<div style="border-bottom: 1px solid #3E79B1;" class="clearBar0"></div>
+	<div id="taskDetailUnitContainer">
+		{{#each transferUnits}}
+		<div class="taskDetailContainer">
+			<div class="taskDetailImageContainer1">
+				<img class="taskDetailImage" src="{{scanImage}}" height="25" width="25" />
+			</div>
+			<div class="taskDetailTextContainer">
+				<div class="taskDetailText1">{{itemDescription}}</div>
+				<div class="taskDetailText2">{{itemDescription2}}</div>
+			</div>
+			<div class="taskDetailImageContainer2">
+				<img class="taskDetailImage" src="{{hasAccessoryImage}}" height="25" width="25" />
+			</div>
+			<div class="taskDetailImageContainer3">
+				<img class="taskDetailImage" src="{{hasDamagedItemImage}}" height="25" width="25" />
+			</div>
+			<div class="taskDetailImageContainer4" data-itemId="{{prefix}}~{{unit}}~{{department}}">
+				<img class="taskDetailImage" src="images/uhs/menuBlack.png" height="25" width="25" />
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>

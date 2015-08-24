@@ -1,0 +1,64 @@
+<style>
+	.swapoutContainer {
+		position: relative;
+		height: 40px;
+		width: 650px;
+		border-bottom: 1px solid #3E79B1;
+	}
+	.swapoutContainerRadio {
+		position: relative;
+		width: 8%;
+		height: 100%;
+		float: left;
+	}
+	
+	.swapoutList{
+		padding-left: 5px;
+		padding-top: 5px;
+	}
+/*	
+	.swapoutContainerRadio input {
+		position: absolute;
+		top: 0;
+		left: .5em;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+*/	
+	.swapoutContainerText1 {
+		position: relative;
+		width: 92%;
+		height: 100%;
+		float: left;
+	}
+</style>
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Swapout</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					{{#each swapouts}}
+					<div class="swapoutContainer">
+						<div class="swapoutContainerRadio">
+							<img src="images/uhs/radiobutton-unchecked.png" class="swapoutList" id="swapoutList{{@index}}" data-index="{{@index}}" data-deliveryPrefix="{{deliveryPrefix}}" data-deliveryUnit="{{deliveryUnit}}">
+						</div>
+						<div class="swapoutContainerText1" id="swapoutContainerText{{@index}}" data-index="{{@index}}">
+							{{deliveryPrefix}} {{deliveryUnit}} {{deliveryDescription}}
+						</div>
+					</div>
+					{{/each}}
+					<input type="hidden" name="deliveryTransferNumber" id="deliveryTransferNumber" value="{{deliveryTransferNumber}}">
+					<input type="hidden" name="localDeliveryTransferNumber" id="localDeliveryTransferNumber" value="{{localDeliveryTransferNumber}}">
+					<input type="hidden" name="pickupTransferNumber" id="pickupTransferNumber" value="{{pickupTransferNumber}}">
+					<input type="hidden" name="localPickupTransferNumber" id="localPickupTransferNumber" value="{{localPickupTransferNumber}}">
+					<input type="hidden" name="pickupPrefix" id="pickupPrefix" value="{{pickupPrefix}}">
+					<input type="hidden" name="pickupUnit" id="pickupUnit" value="{{pickupUnit}}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

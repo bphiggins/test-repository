@@ -1,0 +1,35 @@
+sdkversion: "4.1.0"
+sdk: 
+version: "2.07.14.2015"
+vendor: "rhomobile"
+build: "debug"
+bbver: "6.0"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator6.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.inmotionclient"
+  BundleURLScheme: "inmotionclient"
+wp:
+  productid: "ac2c6780-74ac-0131-fa16-006073d497d2"
+symbian:
+  uid: "0xe127004f"
+android:
+  version: "4.0"
+  android_title: 0
+  capabilities:
+    - hardware_acceleration
+extensions:
+  - rhoconnect-client
+  - signature
+  - rho-javascript
+app_type: "rhoelements"
+capabilities:
+  - camera
+  - hardware_acceleration
+name: "InMotion"
+motorola_license: "QBT3r;l@`jFzar7kLfD^3GUQQPckrzn0PA1U`QLldnio2y0-`{A2L[5aX0VVntgHJcuN2WoDqnVsbY7`Inln.2;g"
+encrypt_database: 1

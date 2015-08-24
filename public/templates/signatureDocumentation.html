@@ -1,0 +1,190 @@
+<style>
+	.transferContainer {
+		position: relative;
+		width: 650px;
+		border: 1px solid #3E79B1;
+	}
+
+	.transferTextContainer {
+		position: relative;
+		width: 100%;
+		height: 25px;
+		background: #3E79B1;
+	}
+
+	.transferText1 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		
+	}
+
+	.transferText2 {
+		position: relative;
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+
+	.prefixContainer {
+		position: relative;
+		width: 100%;
+	}
+
+	.prefixTextContainer {
+		position: relative;
+		width: 100%;
+		height: 25px;
+		background: #B5C3D2;	
+	}
+
+	.prefixText1 {
+		position: relative;
+		width: 21%;
+		height: 100%;
+		float: left;
+	}
+
+	.prefixText2 {
+		position: relative;
+		width: 21%;
+		height: 100%;
+		float: left;
+	}
+
+	.prefixText3 {
+		position: relative;
+		width: 58%;
+		height: 100%;
+		float: left;
+	}
+
+	.unitContainer {
+		position: relative;
+		width: 100%;
+	}
+
+	.unitTextContainer {
+		position: relative;
+		width: 100%;
+		height: 25px;	
+	}
+
+	.unitText1 {
+		position: relative;
+		width: 10%;
+		height: 100%;
+		float: left;
+	}
+
+	.unitText2 {
+		position: relative;
+		width: 22%;
+		height: 100%;
+		float: left;
+	}
+
+	.unitText3 {
+		position: relative;
+		width: 32%;
+		height: 100%;
+		float: left;
+	}
+
+	.unitText4 {
+		position: relative;
+		width: 36%;
+		height: 100%;
+		float: left;
+	}
+
+	.accessoryContainer {
+		position: relative;
+		width: 100%;
+	}
+
+	.accessoryTextContainer {
+		position: relative;
+		width: 100%;
+		height: 25px;
+	}
+
+	.accessoryText1 {
+		position: relative;
+		width: 10%;
+		height: 100%;
+		float: left;
+	}
+
+	.accessoryText2 {
+		position: relative;
+		width: 30%;
+		height: 100%;
+		float: left;
+	}
+
+	.accessoryText3 {
+		position: relative;
+		width: 10%;
+		height: 100%;
+		float: left;
+	}
+
+	.accessoryText4 {
+		position: relative;
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+
+</style>
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Documentation</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					{{#each transferList}}
+					<div class="transferContainer">
+						<div class="transferTextContainer">
+							<div class="transferText1">{{transferType}} {{transferNumber}}</div>
+						</div>
+						{{#each prefixList}}
+						<div class="prefixContainer">
+							<div class="prefixTextContainer">
+								<div class="prefixText1">{{vendor}}</div>
+								<div class="prefixText2">{{model}}</div>
+								<div class="prefixText3">{{description}}</div>
+							</div>
+							{{#each unitList}}
+							<div class="unitContainer">
+								<div class="unitTextContainer">
+									<div class="unitText1"></div>
+									<div class="unitText2">{{prefix}} {{unit}}</div>
+									<div class="unitText3">{{department}}</div>
+									<div class="unitText4">{{purchaseOrder}}</div>
+								</div>
+								{{#each accessoryList}}
+								<div class="accessoryContainer">
+									<div class="accessoryTextContainer">
+										<div class="accessoryText1"></div>
+										<div class="accessoryText2">{{title}}</div>
+										<div class="accessoryText3">{{stockNumberCount}}</div>
+										<div class="accessoryText4">{{stockNumber}}</div>
+									</div>
+								</div>
+								{{/each}}	
+							</div>	
+							{{/each}}	
+						</div>
+						{{/each}}	
+					</div>
+					<div class="clearBar10"></div>
+					{{/each}}	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

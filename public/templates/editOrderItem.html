@@ -1,0 +1,51 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Add Item To Order</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="modalColumn1">
+						<label for="prefix">PFX</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="prefix" id="prefix" type="text" style="width: 55px" required maxlength="3" value="{{prefix}}">
+					</div>
+					<div class="modalColumn1">
+						<label for="quantityOrdered">QTY</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="quantityOrdered" id="quantityOrdered" type="number" style="width: 55px" required value="{{quantityOrdered}}" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					</div>
+					<div class="clearBar0"></div>
+					<div class="modalColumn1">
+						<label for="purchaseOrder">PO</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="purchaseOrder" id="purchaseOrder" type="text" value="{{purchaseOrder}}">
+					</div>
+					<div class="modalColumn1">
+						<label for="department">DEPT</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="department" id="department" type="text" value="{{department}}">
+					</div>
+					<input name="description" id="description" type="hidden" value="{{description}}">
+					<input name="equipmentOrderId" id="equipmentOrderId" type="hidden" value="{{equipmentOrderId}}">
+					<input name="localEquipmentOrderId" id="localEquipmentOrderId" type="hidden" value="{{localEquipmentOrderId}}">
+					<input name="localTransferNumber" id="localTransferNumber" type="hidden" value="{{localTransferNumber}}">
+					<input name="model" id="model" type="hidden" value="{{model}}">
+					<input name="transferNumber" id="transferNumber" type="hidden" value="{{transferNumber}}">
+					<input name="vendor" id="vendor" type="hidden" value="{{vendor}}">
+					<input name="object" id="object" type="hidden" value="{{object}}">
+					<div id="modalButton">
+						<button id="saveNew" class="modalButton">Save and Add Another</button>
+						<div class="clearBar0"></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+

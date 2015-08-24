@@ -1,0 +1,87 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Edit Trip</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="clearBar5"></div>
+					<div class="modalColumn1" style="width: 339px;">
+						{{employeeName}}&nbsp;[{{employeeId}}]
+					</div>
+					<div class="modalColumn1" style="width: 100px;">
+						Created
+					</div>
+					<div class="modalColumn2" style="width: 191px;">
+						{{dateTimeFormat dspTripCreateDateDevice}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						Trip Id
+					</div>
+					<div class="modalColumn2" style="width: 260px;">
+						{{dspTripId}}
+					</div>
+					<div class="modalColumn1" style="width: 100px;">
+						Checked Out
+					</div>
+					<div class="modalColumn2" style="width: 191px;">
+						{{dateTimeFormat dspTripCheckoutDateDevice}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						Status
+					</div>
+					<div class="modalColumn2" style="width: 260px;">
+						{{status}}
+					</div>
+					<div class="modalColumn1" style="width: 100px;">
+						Started
+					</div>
+					<div class="modalColumn2" style="width: 191px;">
+						{{dateTimeFormat dspTripStartDateDevice}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						<label for="vehicleId">Vehicle Id</label>
+					</div>
+					<div class="modalColumn2" style="width: 260px;">
+						<input name="vehicleId" id="vehicleId" type="text" maxlength="17" value="{{vehicleId}}">
+					</div>
+					<div class="modalColumn1" style="width: 100px;">
+						Closed
+					</div>
+					<div class="modalColumn2" style="width: 191px;">
+						{{dateTimeFormat dspTripEndDateDevice}}
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						Device Id
+					</div>
+					<div class="modalColumn2" style="width: 260px;">
+						{{client_id}}
+					</div>
+					<div class="modalColumn1" style="width: 100px;">
+						Version
+					</div>
+					<div class="modalColumn2" style="width: 191px;">
+						{{version}}
+					</div>
+					<div class="clearBar5"></div>
+					<input name="employeeName" id="employeeName" type="hidden" value="{{employeeName}}">
+					<input name="employeeId" id="employeeId" type="hidden" value="{{employeeId}}">
+					<input name="localTripId" id="localTripId" type="hidden" value="{{localTripId}}">
+					<input name="tripId" id="tripId" type="hidden" value="{{tripId}}">
+					<input name="tripCreateDateDevice" id="tripCreateDateDevice" type="hidden" value="{{tripCreateDateDevice}}">
+					<input name="tripCheckoutDateDevice" id="tripCheckoutDateDevice" type="hidden" value="{{tripCheckoutDateDevice}}">
+					<input name="tripStartDateDevice" id="tripStartDateDevice" type="hidden" value="{{tripStartDateDevice}}">
+					<input name="tripEndDateDevice" id="tripEndDateDevice" type="hidden" value="{{tripEndDateDevice}}">
+					<input name="object" id="object" type="hidden" value="{{object}}"> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+

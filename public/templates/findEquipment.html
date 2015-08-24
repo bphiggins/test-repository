@@ -1,0 +1,24 @@
+<div id="frameListContent">
+	<div>
+		<button id="saveFindEquipmentButton" class="modalButton" style="margin: 12px 15px 3px 0;">Save</button>
+	</div>
+	<div class="clearBar10" style="border-bottom: 1px solid #3E79B1;"></div>
+	{{#each equipment}}
+	<div class="findEquipmentContainer" data-itemId="{{prefix}}~{{unit}}">
+		<div class="findEquipmentImageContainer">
+			<img class="findEquipmentImage" data-itemId="{{prefix}}~{{unit}}" src="images/uhs/blank.png">
+		</div>
+		<div class="findEquipmentTextContainer" data-itemId="{{prefix}}~{{unit}}">
+			<div class="findEquipmentText1">
+				{{prefix}} {{dspUnit}}
+			</div>
+			<div class="findEquipmentText2">
+				{{description}}
+			</div>
+			<div class="findEquipmentText3">
+				{{cstat}}
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>

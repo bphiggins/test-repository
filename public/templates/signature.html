@@ -1,0 +1,84 @@
+<div id="frameListContent">
+	<div style="padding-left: 10px">
+		<button class="signatureButton" id="signatureCancel">Cancel</button>
+		<button class="signatureButton" id="signatureContinue">Continue</button>
+		<button class="signatureButton" id="signatureSave">Save</button>
+		<button class="signatureButton" id="signatureDocumentation">Documentation</button>
+		<button class="signatureButton" id="clearInlineSignature">Clear</button>
+		<div id="selectEmailFaxForm">
+			Send documentation via:<br>
+			<div class="emailContainer">
+				<div class="emailCheckboxContainer">
+					<div class="emailCheckboxText">Email</div>
+				</div>	
+				<div class="emailContainerText1"></div>
+				<div class="emailContainerText2">
+					<input style="width: 320px" type="text" name="emailInput" id="emailInput" value="">
+				</div>	
+				<div class="emailCheckboxContainer">
+					<div class="faxCheckboxText">
+						Fax *
+					</div>
+				</div>	
+				<div class="emailContainerText1"></div>
+				<div class="emailContainerText2">
+					<input style="width: 320px"type="text" name="faxInput" id="faxInput" value="" maxlength="10">
+				</div>	
+			</div>
+			<div class="clearBar10"></div>
+			<div class="emailListContainer">
+				{{#if emailList}}
+				{{#each emailList}}
+				<div class="accountContactContainer">
+					<div class="accountContactContainerRadio">
+						<img src="images/uhs/checkbox-unchecked.png" class="emailContactImage" id="emailContactImage{{@index}}" data-index="{{@index}}" data-localAccountContactId="{{localAccountContactId}}" data-accountContactId="{{accountContactId}}" data-contactValue="{{contactValue}}"> 
+					</div>
+					<div class="accountContactContainerText emailContactImage" data-index="{{@index}}">
+						{{contactValue}}
+					</div>
+				</div>
+				{{/each}}
+				{{else}}
+				<div style="text-align: center;"><p>No email addresses found for this account</p></div>
+				{{/if}}
+			</div>
+			<div class="clearBar10"></div>
+			<div class="emailListContainer">
+				{{#if faxList}}
+				{{#each faxList}}
+				<div class="accountContactContainer">
+					<div class="accountContactContainerRadio">
+						<img src="images/uhs/radiobutton-unchecked.png" class="faxContactImage" id="faxContactImage{{@index}}" data-index="{{@index}}" data-localAccountContactId="{{localAccountContactId}}" data-accountContactId="{{accountContactId}}" data-contactValue="{{contactValue}}"> 
+					</div>
+					<div class="accountContactContainerText faxContactImage" data-index="{{@index}}">
+						{{contactValue}}
+					</div>
+				</div>	
+				{{/each}}
+				{{else}}
+				<div style="text-align: center;"><p>No fax numbers found for this account</p></div>
+				{{/if}}
+			</div>
+			<p style="font-size: .75em;">
+				* Due to HIPAA regulations for Protected Health Information (PHI), inMotion will no longer fax documents that could potentially contain patient data regardless if they contain patient data or not.  From now on, if the fax option is selected, only the Safety Inspection Checklist will be faxed for the equipment listed in the selected transfer(s).  Please contact your supervisor or the UHS Chief Compliance Officer if you have any questions.
+			</p>
+		</div>	
+		<div id="captureSignatureForm" data-accountId="{{accountId}}">
+			<div class="clearBar5"></div>
+			<div>
+				<div style="width:30px; float: left;"><img id="acceptTermCondition" src="images/uhs/checkbox-unchecked.png"></div>
+				<div style="float: left;">I accept <a href="javascript: signatureTermsConditions()">UHS Terms and Conditions</a></div>
+			</div>
+			<div class="clearBar5"></div>
+			<div class="inputContainer">
+				<label for="customerName">Customer Name</label>
+				<input type="text" name="customerName" id="customerName" value="" maxlength="50">
+			</div>
+			<div class="clearBar5"></div>
+			<div id="signatureContainer">
+				<img id="signatureImagePlaceholder" src="images/uhs/placeHolderBlank400x200.png">
+			</div>
+			<div class="clearBar10"></div>
+		</div>
+	</div>
+</div>

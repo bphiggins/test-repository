@@ -1,0 +1,62 @@
+<div id="modalForm">
+	<div id="modalTitleSection">
+		<div id="modalTitleText">Edit Item</div>
+	</div>
+	<div id="modalContentSection">
+		<div id="modalText">
+			<div id="modalScrollableContent">
+				<div id="modalWrapper">
+					<div class="modalColumn1">
+						<label for="cstat">CSTAT</label>
+					</div>
+					<div class="modalColumn2">
+						<select name="cstat" id="cstat">
+							<option value=""> </option>
+							<option value="BY">Equipment Buyout</option>
+							<option value="DE">Demo</option>
+							<option value="EN">Evaluation</option>
+							<option value="EV">Evaluation Billable</option>
+							<option value="N1">Not Found 1</option>
+							<option value="N2">Not Found 2</option>
+							<option value="PR">Pickup Requested</option>
+							<option value="SL">Storage Location</option>
+							<option value="U1">Unavailable 1</option>
+							<option value="U2">Unavailable 2</option>
+						</select>
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						<label for="department">DEPT</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="department" id="department" type="text" maxlength="20" value="{{department}}">
+					</div>
+					<div class="clearBar5"></div>
+					<div class="modalColumn1">
+						<label for="purchaseOrder">PO</label>
+					</div>
+					<div class="modalColumn2">
+						<input name="purchaseOrder" id="purchaseOrder" type="text" maxlength="22" value="{{purchaseOrder}}">
+					</div>
+					<input type="hidden" name="description" id="description" value="{{description}}">
+					<input type="hidden" name="employeeInitials" id="employeeInitials" value="{{employeeInitials}}">
+					<input type="hidden" name="localTransferDetailId" id="localTransferDetailId" value="{{localTransferDetailId}}">
+					<input type="hidden" name="localTransferNumber" id="localTransferNumber" value="{{localTransferNumber}}">
+					<input type="hidden" name="localUhsPatientId" id="localUhsPatientId" value="{{localUhsPatientId}}">
+					<input type="hidden" name="prefix" id="prefix" value="{{prefix}}">
+					<input type="hidden" name="reasonRefused" id="reasonRefused" value="{{reasonRefused}}">
+					<input type="hidden" name="refusedFlag" id="refusedFlag" value="{{refusedFlag}}">
+					<input type="hidden" name="scanOffDate" id="scanOffDate" value="scanOffDate">
+					<input type="hidden" name="scanOnDate" id="scanOnDate" value="scanOnDate">
+					<input type="hidden" name="transferDate" id="transferDate" value="{{transferDate}}">
+					<input type="hidden" name="transferDetailId" id="transferDetailId" value="{{transferDetailId}}">
+					<input type="hidden" name="transferNumber" id="transferNumber" value="{{transferNumber}}">
+					<input type="hidden" name="uhsPatientId" id="uhsPatientId" value="{{uhsPatientId}}">
+					<input type="hidden" name="unit" id="unit" value="{{unit}}">
+					<input type="hidden" name="object" id="object" value="{{object}}">
+					<input type="hidden" name="originalDepartment" id="originalDepartment" value="{{department}}">	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

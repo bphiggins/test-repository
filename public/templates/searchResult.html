@@ -1,0 +1,16 @@
+{{#each equipment}}
+<div class="equipmentContainer">
+	<div class="equipmentContainerRadio">
+		<img src="images/uhs/radiobutton-unchecked.png" class="equipmentList" id="equipmentList{{@index}}" data-index="{{@index}}" data-prefix="{{prefix}}" data-unit="{{unit}}">
+	</div>
+	<div class="equipmentContainerText1" data-index="{{@index}}">
+		{{prefix}} {{dspUnit}}
+	</div>
+	<div class="equipmentContainerText2" data-index="{{@index}}">
+		{{serialNumber}}
+	</div>
+	<div class="equipmentContainerText3" data-index="{{@index}}">
+		{{description}}
+	</div>
+</div>		
+{{/each}}
